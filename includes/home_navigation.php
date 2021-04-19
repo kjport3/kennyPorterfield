@@ -5,9 +5,8 @@
             <img src="resources/img/kp-logo-white.png" alt="Kenny Porterfield" class="logo">
             <a href="#top"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield" class="logo-black"></a>
             <ul class="main-nav js--main-nav">
-                <li><a href="index.php">Home</a></li>
-                <!-- <li><a href="gogo-dev/gogorunning">Work</a></li> -->
-                <li><a href="kp-blog">Blog</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="#contact" class="js--scroll-to-contact">Contact</a></li>
                 <?php
                 if (isset($_SESSION['user_role'])) {

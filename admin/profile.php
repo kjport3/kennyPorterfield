@@ -111,7 +111,7 @@ if(isset($_POST['update_user'])) {
                         <div class="form-group">
                             <label for="user_image">User Image</label><br>
                             <?php if($user_image != "") { ?>
-                                <img class="img-thumbnail" style="width:100px;height:auto;margin-bottom:5px;" src="../images/<?php echo $user_image; ?>">
+                                <img class="img-thumbnail" style="width:100px;height:auto;margin-bottom:5px;" src="../resources/img/<?php echo $user_image; ?>">
                             <?php } ?>
                             <input type="file" name="user_image">
                         </div>

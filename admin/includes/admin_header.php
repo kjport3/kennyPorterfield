@@ -4,15 +4,15 @@
 <?php session_start(); ?>
 <?php
 
-//if(!isset($_SESSION['user_role'])) {
-//    header("Location: ../index.php");
-//}
-//if(isset($_SESSION['user_role'])) {
-//    $session_user_role = $_SESSION['user_role'];
-//    if($session_user_role == 'subscriber') {
-//        header("Location: ../index.php");
-//    }
-//}
+if(!isset($_SESSION['user_role'])) {
+    header("Location: ../index.php");
+}
+if(isset($_SESSION['user_role'])) {
+    $session_user_role = $_SESSION['user_role'];
+    if($session_user_role == 'subscriber') {
+        header("Location: ../index.php");
+    }
+}
 
 ?>
 
@@ -27,7 +27,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>KP Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,8 @@
     <![endif]-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+<!--    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>-->
+    <script src="../ckeditor4/ckeditor.js"></script>
 </head>
 
 <body>

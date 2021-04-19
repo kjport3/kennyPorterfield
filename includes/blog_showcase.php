@@ -1,56 +1,52 @@
 <section class="section-blogs js--section-blog" id="blog">
     <ul class="blogs-showcase clearfix">
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/openjs"><img src="resources/img/openjs.png" alt="OpenJS World"></a>
-                <div class="centered-text hide"><a href="blog/openjs">OpenJS World</a></div>
-            </figure>
-        </li>
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/sprout"><img src="resources/img/sprout.jpg" alt="Sprout"></a>
-                <div class="centered-text hide"><a href="blog/sprout">Sprout</a></div>
-            </figure>
-        </li>
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/marketingcloud"><img src="resources/img/sfmarketingcloud.gif"
-                                                   alt="Salesforce Marketing Cloud"></a>
-                <div class="centered-text hide"><a href="blog/marketingcloud">Marketing Cloud</a></div>
-            </figure>
-        </li>
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/botanicalgarden"><img src="resources/img/botanical-garden.JPG" alt="JavaScript"></a>
-                <div class="centered-text hide"><a href="blog/botanicalgarden">Botanical Garden
-                        Re&#8209;opening!</a></div>
-            </figure>
-        </li>
+        <?php
+        $query = "SELECT * FROM posts WHERE post_status = 'Published' ORDER BY post_id desc LIMIT 4";
+        $select_all_posts_query = mysqli_query($connection, $query);
+
+        while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
+            $post_title = $row['post_title'];
+            $post_author = $row['post_author'];
+            $post_date = $row['post_date'];
+            $post_image = $row['post_image'];
+            $post_content = $row['post_content'];
+            if (strlen($post_content) > 200) {
+                $post_content = substr($post_content, 0, 200) . '...';
+            }
+            $post_id = $row['post_id'];
+            $post_status = $row['post_status'];
+            ?>
+            <li>
+                <figure class="blog-photo container-blog blog">
+                    <a href="post.php?p_id=<?php echo $post_id; ?>"><img src="resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"></a>
+                    <div class="centered-text hide"><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a></div>
+                </figure>
+            </li>
+        <?php } ?>
     </ul>
     <ul class="blogs-showcase clearfix">
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/iceland"><img src="resources/img/iceland.JPG" alt="Iceland"></a>
-                <div class="centered-text hide"><a href="blog/iceland">Iceland</a></div>
-            </figure>
-        </li>
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/goodreads"><img src="resources/img/books.gif" alt="2020 Reads"></a>
-                <div class="centered-text hide"><a href="blog/goodreads">2020 Reads</a></div>
-            </figure>
-        </li>
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/appalachiantrail"><img src="resources/img/mcafee.jpg" alt="Appalachian Trail"></a>
-                <div class="centered-text hide"><a href="blog/appalachiantrail">Appalachian Trail</a></div>
-            </figure>
-        </li>
-        <li>
-            <figure class="blog-photo container-blog blog">
-                <a href="blog/javascript"><img src="resources/img/js.png" alt="JavaScript"></a>
-                <div class="centered-text hide"><a href="blog/javascript">JavaScript</a></div>
-            </figure>
-        </li>
+        <?php
+        $query = "SELECT * FROM posts WHERE post_status = 'Published' ORDER BY post_id desc LIMIT 4 OFFSET 4";
+        $select_all_posts_query = mysqli_query($connection, $query);
+
+        while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
+            $post_title = $row['post_title'];
+            $post_author = $row['post_author'];
+            $post_date = $row['post_date'];
+            $post_image = $row['post_image'];
+            $post_content = $row['post_content'];
+            if (strlen($post_content) > 200) {
+                $post_content = substr($post_content, 0, 200) . '...';
+            }
+            $post_id = $row['post_id'];
+            $post_status = $row['post_status'];
+            ?>
+            <li>
+                <figure class="blog-photo container-blog blog">
+                    <a href="post.php?p_id=<?php echo $post_id; ?>"><img src="resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"></a>
+                    <div class="centered-text hide"><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a></div>
+                </figure>
+            </li>
+        <?php } ?>
     </ul>
 </section>

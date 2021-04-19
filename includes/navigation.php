@@ -7,7 +7,7 @@
             <ul class="main-nav js--main-nav">
                 <li><a href="index.php">Home</a></li>
                 <!-- <li><a href="gogo-dev/gogorunning">Work</a></li> -->
-                <li><a href="#top">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
                 <li><a href="#contact" class="js--scroll-to-contact">Contact</a></li>
                 <?php
                 if (isset($_SESSION['user_role'])) {

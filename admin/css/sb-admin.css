@@ -17,6 +17,10 @@ body {
     }
 }
 
+.padding-zero {
+    padding: 0px;
+}
+
 #wrapper {
     padding-left: 0;
 }
