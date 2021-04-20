@@ -12,7 +12,7 @@
     </thead>
     <tbody>
     <?php
-    $query = "SELECT * FROM comments";
+    $query = "SELECT * FROM comments ORDER BY comment_id desc";
     $select_comments = mysqli_query($connection, $query);
 
     while($row = mysqli_fetch_assoc($select_comments)) {
@@ -44,7 +44,7 @@
         echo "<td>{$comment_status}</td>";
         echo "<td><a href='comments.php?approve={$comment_id}'>Approve</a></td>";
         echo "<td><a href='comments.php?deny={$comment_id}'>Deny</a></td>";
-        echo "<td><a href='comments.php?delete={$comment_id}'>Delete</a></td>";
+        echo "<td><a href='comments.php?delete={$comment_id}&p_id={$comment_post_id}'>Delete</a></td>";
         echo "</tr>";
     }
     ?>
@@ -70,8 +70,12 @@ if(isset($_GET['deny'])){
 
 if(isset($_GET['delete'])){
     $delete_comment_id = $_GET['delete'];
+    $update_comment_count_id = $_GET['p_id'];
     $query = "DELETE FROM comments WHERE comment_id = {$delete_comment_id} ";
     $delete_query = mysqli_query($connection, $query);
+    $query = "UPDATE posts SET post_comment_count = post_comment_count-1 ";
+    $query .= "WHERE post_id = {$update_comment_count_id} ";
+    $post_update_comment_count_query = mysqli_query($connection, $query);
     header("Location: comments.php");
 }
 

@@ -34,18 +34,25 @@ if (isset($_SESSION['username'])) {
         $post_id = $_GET['p_id'];
         $comment_author = $_POST['comment_author'];
         $comment_content = $_POST['comment_content'];
-        $comment_status = 'Pending';
+        $comment_status = 'Approved';
         if($user_role == 'admin') {
             $comment_status = 'Approved';
         }
+        $comment_content = mysqli_real_escape_string($connection, $comment_content );
 
         $query = "INSERT INTO comments (comment_post_id, comment_date, comment_author, comment_content, comment_status) ";
         $query .= "VALUES ($post_id, now(), '$comment_author', '$comment_content', '$comment_status')";
         $comment_query = mysqli_query($connection, $query);
+        if(!$comment_query) {
+            die("QUERY FAILED<br>" . mysqli_error($connection));
+        }
 
         $query = "UPDATE posts SET post_comment_count = post_comment_count+1 ";
         $query .= "WHERE post_id = {$post_id} ";
         $post_update_comment_count_query = mysqli_query($connection, $query);
+        if(!$post_update_comment_count_query) {
+            die("QUERY FAILED<br>" . mysqli_error($connection));
+        }
     }
     ?>
     <!-- Comments Form -->
