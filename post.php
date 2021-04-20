@@ -34,7 +34,8 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $user_role = $_SESSION['user_role'];
                 if ($user_role == 'admin') {
                     ?>
-                    <small><a href="admin/posts.php?source=update_post&p_id=<?php echo $post_id; ?>">Edit Post</a></small>
+                    <small><a href="admin/posts.php?source=update_post&p_id=<?php echo $post_id; ?>">Edit
+                            Post</a></small>
                 <?php }
             } ?>
             <p class="long-copy">
@@ -45,6 +46,9 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
         </div>
     </section>
 <?php } ?>
+
+
+<?php include "includes/comments.php"; ?>
 
 <?php include "includes/blog_showcase.php"; ?>
 

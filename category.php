@@ -15,7 +15,7 @@ include "includes/navigation.php"; // Site Navigation
                 $cat_title_query = mysqli_query($connection, $query);
                 while ($row = mysqli_fetch_assoc($cat_title_query)) {
                     $cat_title = $row['cat_title'];
-                    echo "<h2>$cat_title Blogs</h2>";
+                    echo "<h2>$cat_title</h2>";
                 }
 
                 $query = "SELECT * FROM posts WHERE post_category_id = $cat_id AND post_status = 'Published' ORDER BY post_date desc";
