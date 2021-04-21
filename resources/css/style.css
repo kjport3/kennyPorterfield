@@ -529,6 +529,13 @@ header {
     border-radius: 50%;
 }
 
+.rectangle-hero {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    border-radius: 30px;
+}
+
 section#blog a {
     color: #FFFFFF;
     text-decoration: none;
@@ -559,6 +566,16 @@ section#blog a {
 
 .blog-photo:hover {
     background-color: #000;
+}
+
+.about-container {
+    margin: auto !important;
+    width: 100% !important;
+}
+
+.about-links {
+    text-align: center !important;
+    float: none !important;
 }
 
 .blog-photo img {
@@ -617,6 +634,12 @@ section#blog a {
     }
     .col-md-12 {
         width: 100%;
+    }
+    .rectangle-hero {
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+        border-radius: 30px;
     }
 }
 

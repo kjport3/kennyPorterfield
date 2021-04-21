@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             if (empty($post_banner_image)) {
                 echo "<img src='../resources/img/{$post_image}' alt='{$post_title}' class='blog-hero'>";
             } else {
-                echo "<br><br><img src='../resources/img/{$post_banner_image}' alt='{$post_title}' style='width: 80%; height: auto; margin-left: 10%;'>";
+                echo "<br><br><img src='../resources/img/{$post_banner_image}' alt='{$post_title}'  class='rectangle-hero'>";
             }
 
             ?>
