@@ -8,6 +8,8 @@ if(isset($_POST['create_post'])){
 
     $post_image = $_FILES['post_image']['name'];
     $post_image_temp = $_FILES['post_image']['tmp_name'];
+    $post_banner_image = $_FILES['post_banner_image']['name'];
+    $post_banner_image_temp = $_FILES['post_banner_image']['tmp_name'];
 
     $post_tags = $_POST['post_tags'];
     $post_content = $_POST['post_content'];
@@ -17,9 +19,10 @@ if(isset($_POST['create_post'])){
     $post_comment_count = 0;
 
     move_uploaded_file($post_image_temp, "../resources/img/$post_image");
+    move_uploaded_file($post_banner_image_temp, "../resources/img/$post_banner_image");
 
-    $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) ";
-    $query .= "VALUES({$post_category_id},'{$post_title}','{$post_author}',now(),'{$post_image}','{$post_content}','{$post_tags}','{$post_comment_count}','{$post_status}')  ";
+    $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status, post_banner_image) ";
+    $query .= "VALUES({$post_category_id},'{$post_title}','{$post_author}',now(),'{$post_image}','{$post_content}','{$post_tags}','{$post_comment_count}','{$post_status}','{$post_banner_image}')  ";
     $create_post_query = mysqli_query($connection, $query);
 
     confirmQuery($create_post_query);
@@ -72,6 +75,11 @@ if(isset($_POST['create_post'])){
     <div class="form-group">
         <label for="post_image">Post Image</label>
         <input type="file" name="post_image">
+    </div>
+
+    <div class="form-group">
+        <label for="post_banner_image">Post Banner Image</label>
+        <input type="file" name="post_banner_image">
     </div>
 
     <div class="form-group">

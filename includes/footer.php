@@ -27,6 +27,12 @@
 <script src="external/js/jquery.waypoints.min.js"></script>
 <script src="resources/js/script.js"></script>
 
+<script type="text/javascript">
+    $('.comment-delete').on('click', function () {
+        return confirm('Are you sure you want to delete this comment?');
+    });
+</script>
+
 </body>
 
 </html>

@@ -14,6 +14,7 @@ while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
     $post_category_id = $row['post_category_id'];
     $post_date = $row['post_date'];
     $post_image = $row['post_image'];
+    $post_banner_image = $row['post_banner_image'];
     $post_comment_count = $row['post_comment_count'];
     $post_content = $row['post_content'];
     $post_tags = $row['post_tags'];
@@ -34,12 +35,15 @@ while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
 
         $post_image = $_FILES['post_image']['name'];
         $post_image_temp = $_FILES['post_image']['tmp_name'];
+        $post_banner_image = $_FILES['post_banner_image']['name'];
+        $post_banner_image_temp = $_FILES['post_banner_image']['tmp_name'];
 
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
         $post_content = mysqli_real_escape_string($connection, $post_content);
 
         move_uploaded_file($post_image_temp, "../resources/img/$post_image");
+        move_uploaded_file($post_banner_image_temp, "../resources/img/$post_banner_image");
 
         if (empty($post_image)) {
             $query = "SELECT * FROM posts WHERE post_id = {$update_post_id} ";
@@ -47,6 +51,14 @@ while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
 
             while ($row = mysqli_fetch_array($select_image)) {
                 $post_image = $row['post_image'];
+            }
+        }
+        if (empty($post_banner_image)) {
+            $query = "SELECT * FROM posts WHERE post_id = {$update_post_id} ";
+            $select_banner_image = mysqli_query($connection, $query);
+
+            while ($row = mysqli_fetch_array($select_banner_image)) {
+                $post_banner_image = $row['post_banner_image'];
             }
         }
 
@@ -57,7 +69,8 @@ while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
         $query .= "post_status = '{$post_status}', ";
         $query .= "post_tags = '{$post_tags}', ";
         $query .= "post_content = '{$post_content}', ";
-        $query .= "post_image = '{$post_image}' ";
+        $query .= "post_image = '{$post_image}', ";
+        $query .= "post_banner_image = '{$post_banner_image}' ";
         $query .= "WHERE post_id = {$update_post_id} ";
 
         $update_post_query = mysqli_query($connection, $query);
@@ -121,6 +134,15 @@ while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
                      src="../resources/img/<?php echo $post_image; ?>">
             <?php } ?>
             <input type="file" name="post_image">
+        </div>
+
+        <div class="form-group">
+            <label for="post_banner_image">Post Banner Image</label><br>
+            <?php if ($post_banner_image != "") { ?>
+                <img class="img-thumbnail" style="width:100px;height:auto;margin-bottom:5px;"
+                     src="../resources/img/<?php echo $post_banner_image; ?>">
+            <?php } ?>
+            <input type="file" name="post_banner_image">
         </div>
 
         <div class="form-group">
