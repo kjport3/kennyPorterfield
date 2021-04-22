@@ -2,6 +2,7 @@
 
 if(isset($_POST['create_post'])){
     $post_title = $_POST['post_title'];
+    $post_title = mysqli_real_escape_string($connection, $post_title );
     $post_category_id  = $_POST['post_category'];
     $post_author = $_POST['post_author'];
     $post_status = $_POST['post_status'];
@@ -89,7 +90,11 @@ if(isset($_POST['create_post'])){
 
     <div class="form-group">
         <label for="post_content">Post Content</label>
-        <textarea class="form-control" name="post_content" id="body" cols="30" rows="10"></textarea>
+        <textarea name="post_content" id="post_content" rows="10" cols="80"></textarea>
+        <script>
+            CKEDITOR.replace('post_content');
+        </script>
+        <!-- <textarea class="form-control" name="post_content" id="body" cols="30" rows="10">--><!--</textarea>-->
     </div>
 
     <div class="form-group">

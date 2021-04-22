@@ -142,6 +142,11 @@ h2:after {
     margin: 20px 0px 20px 40px;
 }
 
+.blog-post p img {
+    border-radius: 10% 30%;
+    margin: 30px 10% 30px 10%;
+}
+
 .box p {
     font-size: 90%;
     line-height: 145%;

@@ -29,6 +29,7 @@ while ($row = mysqli_fetch_assoc($select_posts_by_id)) {
 
     if (isset($_POST['update_post'])) {
         $post_title = $_POST['post_title'];
+        $post_title = mysqli_real_escape_string($connection, $post_title);
         $post_category_id = $_POST['post_category'];
         $post_author = $_POST['post_author'];
         $post_status = $_POST['post_status'];
