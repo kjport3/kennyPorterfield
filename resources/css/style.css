@@ -37,6 +37,21 @@ body {
     visibility: hidden;
 }
 
+.blog-post td, th {
+    padding: 5px !important;
+    border: 1px solid #888888;
+}
+
+.blog-post td a {
+    border: 0;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.blog-post table {
+    margin: 20px;
+}
+
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
@@ -140,6 +155,26 @@ h2:after {
 
 .blog-post ul {
     margin: 20px 0px 20px 40px;
+}
+
+.blog-post ul a {
+    border: 0;
+}
+
+.blog-post ol {
+    margin: 20px 0px 20px 40px;
+}
+
+.blog-post ol a {
+    border: 0;
+}
+
+.blog-post a:link {
+    border: 0;
+}
+
+.section-about a:link {
+    border: 0;
 }
 
 .blog-post p img {
@@ -279,6 +314,18 @@ a:hover,
 a:active {
     color: #555;
     border-bottom: 1px solid transparent;
+}
+
+.blog-post a:hover,
+.blog-post a:active {
+    color: #555;
+    border-bottom: 1px solid #555;
+}
+
+.section-about a:hover,
+.section-about a:active {
+    color: #555;
+    border-bottom: 1px solid #555;
 }
 
 /* ----- BUTTONS ----- */
@@ -534,6 +581,15 @@ header {
     border-radius: 50%;
 }
 
+.blog-thumbnail {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 150px;
+    border-radius: 50%;
+}
+
 .rectangle-hero {
     width: 80%;
     height: auto;
@@ -599,6 +655,15 @@ section#blog a {
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
     transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .blogs-showcase li {
+        width: 50%;
+    }
+    .centered-text a {
+        font-size: 1.8em;
+    }
 }
 
 @media (min-width: 768px) {

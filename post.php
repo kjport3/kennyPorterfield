@@ -33,7 +33,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
     $post_image = $row['post_image'];
     $post_banner_image = $row['post_banner_image'];
     $post_content = $row['post_content'];
-    $post_id = $row['post_id'];
+    $post_category_id = $row['post_category_id'];
     ?>
     <section class="section-about" id="about">
         <div class="row">
@@ -59,11 +59,35 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                             Post</a></small>
                 <?php }
             } ?>
+            <?php
+            $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
+            $select_categories = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($select_categories)) {
+                $cat_id = $row['cat_id'];
+                $cat_title = $row['cat_title'];
+
+                echo "<p style='text-align:right;'><small>Category: <a href='category.php?category={$cat_id}'>{$cat_title}</a></small></p>";
+            }
+            ?>
             <p class="long-copy">
                 <?php echo $post_content; ?>
             </p>
+
             <br><br>
             <small>by <?php echo $post_author; ?> | <?php echo date('D, M j Y', strtotime($post_date)); ?></small>
+            <br><br>
+            <?php
+            $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
+            $select_categories = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($select_categories)) {
+                $cat_id = $row['cat_id'];
+                $cat_title = $row['cat_title'];
+
+                echo "Check out other <a href='category.php?category={$cat_id}'>{$cat_title}</a> blogs";
+            }
+            ?>
         </div>
     </section>
 <?php } ?>

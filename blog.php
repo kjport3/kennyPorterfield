@@ -37,8 +37,10 @@ include "includes/navigation.php"; // Site Navigation
                     $post_id = $row['post_id'];
                     $post_status = $row['post_status'];
                     ?>
-
-                    <p class="long-copy">
+                    <div class="row">
+                        <a href="post.php?p_id=<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>" class="blog-thumbnail"></a>
+                    </div>
+                    <p class="long-copy" style="text-align: center;">
                         <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?>
                             - <?php echo date('D, M j Y', strtotime($post_date)); ?></a>
                     </p>
