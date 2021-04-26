@@ -59,6 +59,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                             Post</a></small>
                 <?php }
             } ?>
+            <p style="text-align: right;"><small>by <?php echo $post_author; ?> | <?php echo date('D, M j Y', strtotime($post_date)); ?></small></p>
             <?php
             $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
             $select_categories = mysqli_query($connection, $query);
@@ -73,9 +74,6 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             <p class="long-copy">
                 <?php echo $post_content; ?>
             </p>
-
-            <br><br>
-            <small>by <?php echo $post_author; ?> | <?php echo date('D, M j Y', strtotime($post_date)); ?></small>
             <br><br>
             <?php
             $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
@@ -85,7 +83,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
 
-                echo "Check out other <a href='category.php?category={$cat_id}'>{$cat_title}</a> blogs";
+                echo "Check out other <a href='category.php?category={$cat_id}'>{$cat_title}</a> blogs.";
             }
             ?>
         </div>

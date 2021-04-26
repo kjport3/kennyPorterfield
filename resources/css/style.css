@@ -177,6 +177,10 @@ h2:after {
     border: 0;
 }
 
+.section-about .form-group a:link {
+    border: 1px solid #45aaf2;
+}
+
 .blog-post p img {
     border-radius: 10% 30%;
     margin: 30px 10% 30px 10%;
@@ -408,6 +412,12 @@ input[type=submit]:active {
     color: #fff;
 }
 
+.form-group .btn-ghost:hover,
+.form-group .btn-ghost:active {
+    border: 1px solid #2d98da;
+    color: #fff;
+}
+
 
 /* ----------------------------------------------- */
 /* HEADER */
@@ -482,6 +492,61 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #45aaf2;
+}
+
+.dropdown-btn {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+    width: 150px;
+}
+
+
+.dropdown-link {
+    color: #FFFFFF !important;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.main-nav .dropdown-content li {
+    margin-left: 0;
+}
+
+.dropdown-content .divider {
+    height: 1px;
+    margin: 9px 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.first-dropdown {
+    margin-top: 10px !important;
+}
+
+.sticky .dropdown-link {
+    color: #000000 !important;
+}
+
+.sticky .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.98)
 }
 
 

@@ -36,7 +36,7 @@ if(isset($_POST['update_user'])) {
     $user_password = $_POST['user_password'];
     $user_status = $user_status;
 
-    move_uploaded_file($user_image_temp, "../images/$user_image");
+    move_uploaded_file($user_image_temp, "../resources/img/$user_image");
 
     if (empty($user_image)) {
         $query = "SELECT * FROM users WHERE user_id = {$user_id} ";

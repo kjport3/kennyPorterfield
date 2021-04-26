@@ -23,7 +23,21 @@ if (isset($_POST['create_user'])) {
     }
 
     $username = mysqli_real_escape_string($connection, $username);
+    $user_firstname = mysqli_real_escape_string($connection, $user_firstname);
+    $user_lastname = mysqli_real_escape_string($connection, $user_lastname);
+    $user_email = mysqli_real_escape_string($connection, $user_email);
     $user_password = mysqli_real_escape_string($connection, $user_password);
+
+    $query = "SELECT randSalt FROM users ";
+    $select_rand_query = mysqli_query($connection, $query);
+
+    if(!$select_rand_query) {
+        die("Query failed" . mysqli_error($connection));
+    }
+
+    while ($row = mysqli_fetch_array($select_rand_query)) {
+        echo $salt = $row['randSalt'];
+    }
 
     $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_image, user_role, user_status) ";
     $query .= "VALUES('{$username}','{$user_password}','{$user_firstname}','{$user_lastname}','{$user_email}','{$user_image}','{$user_role}','{$user_status}')  ";

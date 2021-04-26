@@ -15,27 +15,27 @@ include "includes/navigation.php"; // Navigation
             <form action="includes/signup.php" method="post">
                 <div class="form-group">
                     <label for="user_firstname">Firstname</label>
-                    <input type="text" class="form-control" id="user_firstname" name="user_firstname">
+                    <input type="text" class="form-control" id="user_firstname" name="user_firstname" required>
                 </div>
                 <div class="form-group">
                     <label for="user_lastname">Lastname</label>
-                    <input type="text" class="form-control" id="user_lastname" name="user_lastname">
+                    <input type="text" class="form-control" id="user_lastname" name="user_lastname" required>
                 </div>
                 <div class="form-group">
-                    <label for="user_image">User Image</label><br>
+                    <label for="user_image">Profile Picture</label><br>
                     <input type="file" name="user_image">
                 </div>
                 <div class="form-group">
                     <label for="user_email">Email</label>
-                    <input type="text" class="form-control" id="user_email" name="user_email">
+                    <input type="text" class="form-control" id="user_email" name="user_email" required>
                 </div>
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username">
+                    <input type="text" class="form-control" id="username" name="username" required>
                 </div>
                 <div class="form-group">
                     <label for="user_password">Password</label>
-                    <input type="password" class="form-control" id="user_password" name="user_password">
+                    <input type="password" class="form-control" id="user_password" name="user_password" required>
                 </div>
                 <button type="submit" name="create_user" class="btn">Create an Account</button>
                 <?php
