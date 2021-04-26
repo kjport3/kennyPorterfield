@@ -68,7 +68,7 @@ include "includes/navigation.php"; // Site Navigation
                         $query = "SELECT * FROM categories";
                         $select_categories_sidebar = mysqli_query($connection, $query);
                         ?>
-                        <h4>Collections</h4><br>
+                        <h4>Categories</h4><br>
                         <?php
                         while($row = mysqli_fetch_assoc($select_categories_sidebar)) {
                             $cat_title = $row['cat_title'];
