@@ -432,6 +432,12 @@ header {
     background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+    header {
+
+    }
+}
+
 .hero-text-box {
     position: absolute;
     width: 1140px;

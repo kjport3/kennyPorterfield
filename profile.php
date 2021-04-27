@@ -56,13 +56,30 @@ if(isset($_POST['update_user'])) {
         }
     }
 
+    $username = mysqli_real_escape_string($connection, $username);
+    $user_firstname = mysqli_real_escape_string($connection, $user_firstname);
+    $user_lastname = mysqli_real_escape_string($connection, $user_lastname);
+    $user_email = mysqli_real_escape_string($connection, $user_email);
+    $user_password = mysqli_real_escape_string($connection, $user_password);
+
+    $query = "SELECT randSalt FROM users ";
+    $select_rand_query = mysqli_query($connection, $query);
+
+    if(!$select_rand_query) {
+        die("Query failed" . mysqli_error($connection));
+    }
+
+    $row = mysqli_fetch_array($select_rand_query);
+    $salt = $row['randSalt'];
+    $hashed_password = crypt($user_password, $salt);
+
     $query = "UPDATE users SET ";
     $query .= "user_firstname = '{$user_firstname}', ";
     $query .= "user_lastname = '{$user_lastname}', ";
     $query .= "user_email = '{$user_email}', ";
     $query .= "username = '{$username}', ";
     $query .= "user_role = '{$user_role}', ";
-    $query .= "user_password = '{$user_password}', ";
+    $query .= "user_password = '{$hashed_password}', ";
     $query .= "user_image = '{$user_image}' ";
     $query .= "WHERE username = '{$username}' ";
     $update_user_query = mysqli_query($connection, $query);

@@ -35,9 +35,9 @@ if (isset($_POST['create_user'])) {
         die("Query failed" . mysqli_error($connection));
     }
 
-    while ($row = mysqli_fetch_array($select_rand_query)) {
-        echo $salt = $row['randSalt'];
-    }
+    $row = mysqli_fetch_array($select_rand_query);
+    $salt = $row['randSalt'];
+    $user_password = crypt($user_password, $salt);
 
     $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_image, user_role, user_status) ";
     $query .= "VALUES('{$username}','{$user_password}','{$user_firstname}','{$user_lastname}','{$user_email}','{$user_image}','{$user_role}','{$user_status}')  ";

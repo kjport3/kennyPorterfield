@@ -47,6 +47,17 @@ if(isset($_POST['update_user'])) {
         }
     }
 
+    $query = "SELECT randSalt FROM users ";
+    $select_rand_query = mysqli_query($connection, $query);
+
+    if(!$select_rand_query) {
+        die("Query failed" . mysqli_error($connection));
+    }
+
+    $row = mysqli_fetch_array($select_rand_query);
+    $salt = $row['randSalt'];
+    $user_password = crypt($user_password, $salt);
+
     $query = "UPDATE users SET ";
     $query .= "user_firstname = '{$user_firstname}', ";
     $query .= "user_lastname = '{$user_lastname}', ";
