@@ -62,16 +62,7 @@ if(isset($_POST['update_user'])) {
     $user_email = mysqli_real_escape_string($connection, $user_email);
     $user_password = mysqli_real_escape_string($connection, $user_password);
 
-    $query = "SELECT randSalt FROM users ";
-    $select_rand_query = mysqli_query($connection, $query);
-
-    if(!$select_rand_query) {
-        die("Query failed" . mysqli_error($connection));
-    }
-
-    $row = mysqli_fetch_array($select_rand_query);
-    $salt = $row['randSalt'];
-    $hashed_password = crypt($user_password, $salt);
+    $user_password = password_hash($user_password, PASSWORD_BCRYPT, array('cost' => 12));
 
     $query = "UPDATE users SET ";
     $query .= "user_firstname = '{$user_firstname}', ";
@@ -79,7 +70,7 @@ if(isset($_POST['update_user'])) {
     $query .= "user_email = '{$user_email}', ";
     $query .= "username = '{$username}', ";
     $query .= "user_role = '{$user_role}', ";
-    $query .= "user_password = '{$hashed_password}', ";
+    $query .= "user_password = '{$user_password}', ";
     $query .= "user_image = '{$user_image}' ";
     $query .= "WHERE username = '{$username}' ";
     $update_user_query = mysqli_query($connection, $query);
