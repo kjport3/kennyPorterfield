@@ -19,8 +19,8 @@
             ?>
             <li>
                 <figure class="blog-photo container-blog blog">
-                    <a href="post.php?p_id=<?php echo $post_id; ?>"><img src="resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"></a>
-                    <div class="centered-text hide"><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a></div>
+                    <a href="post/<?php echo $post_id; ?>"><img src="resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"></a>
+                    <div class="centered-text hide"><a href="post/<?php echo $post_id; ?>"><?php echo $post_title; ?></a></div>
                 </figure>
             </li>
         <?php } ?>
@@ -44,8 +44,8 @@
             ?>
             <li>
                 <figure class="blog-photo container-blog blog">
-                    <a href="post.php?p_id=<?php echo $post_id; ?>"><img src="resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"></a>
-                    <div class="centered-text hide"><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a></div>
+                    <a href="post/<?php echo $post_id; ?>"><img src="resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"></a>
+                    <div class="centered-text hide"><a href="post/<?php echo $post_id; ?>"><?php echo $post_title; ?></a></div>
                 </figure>
             </li>
         <?php } ?>

@@ -68,7 +68,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
 
-                echo "<p style='text-align:right;'><small>Category: <a href='category.php?category={$cat_id}'>{$cat_title}</a></small></p>";
+                echo "<p style='text-align:right;'><small>Category: <a href='category/{$cat_id}'>{$cat_title}</a></small></p>";
             }
             ?>
             <p style="min-height: 20px;">
@@ -83,7 +83,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
 
-                echo "Check out other <a href='category.php?category={$cat_id}'>{$cat_title}</a> blogs.";
+                echo "Check out other <a href='category/{$cat_id}'>{$cat_title}</a> blogs.";
             }
             ?>
         </div>

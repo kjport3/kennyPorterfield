@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col span-1-of-2">
             <ul class="footer-nav">
-                <li><a href="#about" class="js--scroll-to-about">About Me</a></li>
-                <li><a href="kp-blog">Blog</a></li>
+                <li><a href="about" class="js--scroll-to-about">About Me</a></li>
+                <li><a href="blog">Blog</a></li>
             </ul>
         </div>
         <div class="col span-1-of-2">

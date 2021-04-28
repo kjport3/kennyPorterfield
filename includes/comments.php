@@ -13,7 +13,7 @@ if (!isset($_SESSION['username'])) {
     <div class="row">
         <div class="col-md-12 col-lg-8">
             <div class="well">
-                <p><a href="login.php">Login</a> or <a href="signup.php">create an account</a> to leave a comment.
+                <p><a href="login">Login</a> or <a href="signup">create an account</a> to leave a comment.
                 </p>
             </div>
         </div>

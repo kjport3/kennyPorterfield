@@ -33,7 +33,7 @@ if(isset($_POST['login'])) {
         $_SESSION['firstname'] = $db_firstname;
         $_SESSION['lastname'] = $db_lastname;
         $_SESSION['user_role'] = $db_user_role;
-        header("Location: ../index.php");
+        header("Location: ../");
     } else {
         header("Location: ../login.php?login=invalid");
     }

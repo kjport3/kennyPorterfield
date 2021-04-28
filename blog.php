@@ -37,12 +37,12 @@ include "includes/navigation.php"; // Site Navigation
                 ?>
                 <div class="col span-1-of-3">
                     <div class="row">
-                        <a href="post.php?p_id=<?php echo $post_id; ?>"><img
+                        <a href="post/<?php echo $post_id; ?>"><img
                                     src="../resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>"
                                     class="blog-thumbnail"></a>
                     </div>
                     <p class="long-copy" style="text-align: center;">
-                        <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?>
+                        <a href="post/<?php echo $post_id; ?>"><?php echo $post_title; ?>
                             - <?php echo date('D, M j Y', strtotime($post_date)); ?></a>
                     </p>
                 </div>
@@ -53,7 +53,7 @@ include "includes/navigation.php"; // Site Navigation
                 <div class="card">
                     <div class="card-body">
                         <h4>Search All Blogs</h4><br>
-                        <form action="search.php" method="post">
+                        <form action="search" method="post">
                             <div class="input-group">
                                 <input name="search" type="text" class="form-control">
                                 <span class="input-group-btn">
@@ -80,7 +80,7 @@ include "includes/navigation.php"; // Site Navigation
                         ?>
                         <div class="col span-1-of-2"
                         <p style='margin-bottom:15px;'>
-                            <a href='category.php?category=<?php echo $cat_id; ?>'><?php echo $cat_title; ?></a>
+                            <a href='category/<?php echo $cat_id; ?>'><?php echo $cat_title; ?></a>
                         </p>
                     </div>
                     <?php

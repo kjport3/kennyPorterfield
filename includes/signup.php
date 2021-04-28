@@ -39,7 +39,7 @@ if (isset($_POST['create_user'])) {
     $_SESSION['lastname'] = $user_lastname;
     $_SESSION['user_role'] = $user_role;
 
-    header("Location: ../index.php");
+    header("Location: ../");
 }
 
 

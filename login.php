@@ -33,7 +33,7 @@ include "includes/navigation.php"; // Navigation
             <br>
             <p>Or</p>
             <br>
-            <a class="btn btn-ghost" href="signup.php" role="button">Create an Account</a>
+            <a class="btn btn-ghost" href="signup" role="button">Create an Account</a>
         </div>
     </section>
 

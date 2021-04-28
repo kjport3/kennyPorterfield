@@ -34,10 +34,10 @@ include "includes/navigation.php"; // Site Navigation
                     ?>
 
                     <div class="row">
-                        <a href="post.php?p_id=<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>" class="blog-hero"></a>
+                        <a href="post/<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>" class="blog-hero"></a>
                     </div>
                     <p class="result-title">
-                        <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?>
+                        <a href="post/<?php echo $post_id; ?>"><?php echo $post_title; ?>
                             - <?php echo date('D, M j Y', strtotime($post_date)); ?></a>
                     </p>
                     <br><br>
