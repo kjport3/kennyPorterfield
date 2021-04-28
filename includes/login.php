@@ -29,15 +29,15 @@ if(isset($_POST['login'])) {
     $password = crypt($password, $db_password);
 
     if($username !== $db_username && $password !== $db_password) {
-        header("Location: ../index.php?login=invalid");
+        header("Location: ../login.php?login=invalid");
     } else if ($username == $db_username && $password == $db_password) {
         $_SESSION['username'] = $db_username;
         $_SESSION['firstname'] = $db_firstname;
         $_SESSION['lastname'] = $db_lastname;
         $_SESSION['user_role'] = $db_user_role;
-        header("Location: ../admin");
+        header("Location: ../index.php");
     } else {
-        header("Location: ../index.php?login=invalid");
+        header("Location: ../login.php?login=invalid");
     }
 }
 

@@ -11,6 +11,14 @@ include "includes/navigation.php"; // Navigation
         <div class="row form-group" style="width: 50%;">
             <h2>Login</h2>
             <br>
+            <?php
+            if (isset($_GET['login'])) {
+                $login_valid = $_GET['login'];
+                if ($login_valid == "invalid") {
+                    echo "<br><div class='alert alert-danger' style='color:red;' role='alert'>You have entered an invalid username or password.</div><br><br>";
+                }
+            }
+            ?>
             <form action="includes/login.php" method="post">
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -21,14 +29,6 @@ include "includes/navigation.php"; // Navigation
                     <input type="password" class="form-control" id="password" name="password" placeholder="">
                 </div>
                 <button type="submit" name="login" class="btn">Login</button>
-                <?php
-                if (isset($_GET['login'])) {
-                    $login_valid = $_GET['login'];
-                    if ($login_valid == "invalid") {
-                        echo "<br><div class='alert alert-danger' role='alert'>This login is invalid.</div>";
-                    }
-                }
-                ?>
             </form><!-- login form -->
             <br>
             <p>Or</p>
