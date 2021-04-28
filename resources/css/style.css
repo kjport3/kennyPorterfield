@@ -468,7 +468,7 @@ header {
     height: 50px;
     width: auto;
     float: left;
-    margin: 5px 0;
+    margin: 13px 0;
 }
 
 /* Main navi */
@@ -498,6 +498,20 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #45aaf2;
+}
+
+.nav-search {
+    margin-bottom: 12px;
+}
+
+.form-control.nav-input {
+    background: rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.sticky .form-control.nav-input {
+    color: #333333;
 }
 
 .dropdown-btn {
@@ -604,7 +618,7 @@ header {
 /* ----------------------------------------------- */
 
 .section-about .long-copy {
-    margin-bottom: 30px;
+    min-height: 94px;
 }
 
 

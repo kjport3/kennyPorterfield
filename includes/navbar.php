@@ -1,6 +1,7 @@
 <div class="row">
     <img src="resources/img/kp-logo-white.png" alt="Kenny Porterfield" class="logo">
-    <a href="http://www.kennyporterfield.com"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield" class="logo-black"></a>
+    <a href="http://www.kennyporterfield.com"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield"
+                                                   class="logo-black"></a>
     <ul class="main-nav js--main-nav">
         <li><a href="index.php">Home</a></li>
         <!-- <li><a href="gogo-dev/gogorunning">Work</a></li> -->
@@ -40,6 +41,18 @@
                 <a href="login.php">Login</a>
             </li>
         <?php } ?>
+        <li>
+            <form action="search.php" method="post">
+                <div class="input-group nav-search">
+                    <input name="search" type="text" class="form-control nav-input" placeholder="Search Blog">
+                    <span class="input-group-btn">
+                        <button name="submit" class="btn btn-default" type="submit" style="display:none;">
+
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </li>
     </ul>
     <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
 </div>

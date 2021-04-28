@@ -1,7 +1,8 @@
 <section class="section-blogs js--section-blog" id="blog">
+    <h2>Recent Blog Posts</h2>
     <ul class="blogs-showcase clearfix">
         <?php
-        $query = "SELECT * FROM posts WHERE post_status = 'Published' ORDER BY post_id desc LIMIT 4";
+        $query = "SELECT * FROM posts WHERE post_status = 'Published' AND post_category_id <> 9 ORDER BY post_id desc LIMIT 4";
         $select_all_posts_query = mysqli_query($connection, $query);
 
         while ($row = mysqli_fetch_assoc($select_all_posts_query)) {

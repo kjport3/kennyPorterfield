@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             if (empty($post_banner_image)) {
                 echo "<img src='../resources/img/{$post_image}' alt='{$post_title}' class='blog-hero'>";
             } else {
-                echo "<br><br><img src='../resources/img/{$post_banner_image}' alt='{$post_title}'  class='rectangle-hero'>";
+                echo "<br><br><br><img src='../resources/img/{$post_banner_image}' alt='{$post_title}'  class='rectangle-hero'>";
             }
 
             ?>
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
                 echo "<p style='text-align:right;'><small>Category: <a href='category.php?category={$cat_id}'>{$cat_title}</a></small></p>";
             }
             ?>
-            <p class="long-copy">
+            <p style="min-height: 20px;">
                 <?php echo $post_content; ?>
             </p>
             <br><br>

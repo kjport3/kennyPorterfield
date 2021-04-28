@@ -30,7 +30,7 @@
 	margin: 1% 0 1% 1.6%;
 }
 
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+/*.col:first-child { margin-left: 0; } !* all browsers except IE6 and lower *!*/
 
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
@@ -51,7 +51,7 @@
 }
 
 .span-1-of-2 {
-	width: 49.2%;
+	width: 48.2%;
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
@@ -78,7 +78,11 @@
 }
 
 .span-1-of-3 {
-	width: 32.26%; 
+	width: 31.26%;
+}
+
+.col.span-1-of-3 {
+	margin-left: 2%;
 }
 
 

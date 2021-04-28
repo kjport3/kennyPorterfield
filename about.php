@@ -3,7 +3,7 @@ include "includes/db.php"; // DB Connection
 
 include "includes/header.php"; // Header
 
-include "includes/home_navigation.php"; // Homepage Navigation
+include "includes/navigation.php"; // Navigation
 ?>
 
     <section class="section-about js--section-about" id="about">
@@ -18,10 +18,9 @@ include "includes/home_navigation.php"; // Homepage Navigation
                 average of over 2,000 miles a year for the last 5 years. In 2014 I thru-hiked the 2,200 miles of
                 the Appalachian Trail over 4 months. I read 70 books last year. And I am currently a Senior Campaign
                 Developer at Digital Additive. I have found that writing about the things I'm learning forces me to
-                slow down, lets the ideas take root, and helps them stick with me. In addition to sharing
-                things I'm learning, I plan to write some blogs on life stuff.<br>
-<!--                <a href="about.php">More about me<i class="fa fa-fw fa-angle-double-right"></i></a>-->
-                <br><br>
+                slow down, lets the ideas take root, and helps them stick with me. In addition to writing blogs sharing
+                things I'm learning, I plan to write some blogs on life stuff.
+                <a href="about.php">More about me<i class="fa fa-fw fa-angle-double-right"></i></a>
             </p>
         </div>
         <div class="row">

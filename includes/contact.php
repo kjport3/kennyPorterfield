@@ -13,7 +13,7 @@
                 <div class="col span-1-of-3">
                     <label for="name">Name</label>
                 </div>
-                <div class="col span-2-of-3">
+                <div class="col span-3-of-3">
                     <input type="text" name="name" id="name" placeholder="Your name" required>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="col span-1-of-3">
                     <label for="email">Email</label>
                 </div>
-                <div class="col span-2-of-3">
+                <div class="col span-3-of-3">
                     <input type="email" name="email" id="email" placeholder="Your email" required>
                 </div>
             </div>
@@ -29,16 +29,13 @@
                 <div class="col span-1-of-3">
                     <label>Drop me a line</label>
                 </div>
-                <div class="col span-2-of-3">
+                <div class="col span-3-of-3">
                     <textarea name="message" placeholder="Your message"></textarea>
                 </div>
             </div>
             <!-- reCAPTCHA -->
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             <div class="row">
-                <div class="col span-1-of-3">
-                    <label>&nbsp;</label>
-                </div>
                 <div class="col span-2-of-3">
                     <div class="g-recaptcha" data-sitekey="6LdrWbIaAAAAAE2K1xOC9oLmFUGURDijLO62enva"></div>
                 </div>
@@ -57,9 +54,6 @@
             ?>
 
             <div class="row">
-                <div class="col span-1-of-3">
-                    <label>&nbsp;</label>
-                </div>
                 <div class="col span-2-of-3">
                     <input type="submit" value="Send it!">
                 </div>
