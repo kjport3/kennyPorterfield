@@ -34,6 +34,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
     $post_banner_image = $row['post_banner_image'];
     $post_content = $row['post_content'];
     $post_category_id = $row['post_category_id'];
+    $post_status = $row['post_status'];
     ?>
     <section class="section-about" id="about">
         <div class="row">

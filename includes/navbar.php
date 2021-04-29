@@ -27,7 +27,7 @@
                     <?php } ?>
                     <li class="divider"></li>
                     <li>
-                        <a href="includes/logout" class="dropdown-link"><i class="fa fa-fw fa-sign-out"></i>&nbsp;Log
+                        <a href="includes/logout.php" class="dropdown-link"><i class="fa fa-fw fa-sign-out"></i>&nbsp;Log
                             Out</a>
                     </li>
                 </ul>

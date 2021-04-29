@@ -107,7 +107,7 @@ if (isset($_GET['p_id'])) {
         ?>
 
         <!-- Posted Comments -->
-        <div class="row">
+        <div class="row" id="comments">
             <div class="col-md-12">
                 <div class="media">
                         <span class="pull-left">

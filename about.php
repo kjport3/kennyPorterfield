@@ -20,7 +20,6 @@ include "includes/navigation.php"; // Navigation
                 Developer at Digital Additive. I have found that writing about the things I'm learning forces me to
                 slow down, lets the ideas take root, and helps them stick with me. In addition to writing blogs sharing
                 things I'm learning, I plan to write some blogs on life stuff.
-                <a href="about.php">More about me<i class="fa fa-fw fa-angle-double-right"></i></a>
             </p>
         </div>
         <div class="row">

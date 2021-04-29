@@ -44,7 +44,16 @@ if (isset($_GET['u_id'])) {
                 }
             }
 
-            $user_password = password_hash($user_password, PASSWORD_BCRYPT, array('cost' => 12));
+            if (!empty($user_password)) {
+                $query_password = "SELECT user_password FROM users WHERE user_id = $user_id ";
+                $get_user = mysqli_query($connection, $query_password);
+                $row = mysqli_fetch_array($get_user);
+                $db_user_password = $row['user_password'];
+
+                if ($db_user_password != $user_password) {
+                    $user_password = password_hash($user_password, PASSWORD_BCRYPT, array('cost' => 12));
+                }
+            }
 
             $query = "UPDATE users SET ";
             $query .= "user_firstname = '{$user_firstname}', ";

@@ -48,6 +48,7 @@ include "includes/navigation.php"; // Site Navigation
                 </div>
             <?php } ?>
         </div>
+        <br>
         <div class="row">
             <div class="col span-1-of-2">
                 <div class="card">
