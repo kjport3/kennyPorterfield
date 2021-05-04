@@ -8,6 +8,17 @@ include "includes/navigation.php"; // Navigation
 
 
 <?php
+function email_exists($user_email){
+    global $connection;
+    $query = "SELECT user_email FROM users WHERE user_email = '$user_email' ";
+    $result = mysqli_query($connection,$query);
+    if(mysqli_num_rows($result) > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
     $user_role = $_SESSION['user_role'];
@@ -70,25 +81,37 @@ if (isset($_SESSION['username'])) {
                         $user_password = password_hash($user_password, PASSWORD_BCRYPT, array('cost' => 12));
                     }
                 }
+                if (!empty($user_password)) {
+                    $query = "SELECT user_email FROM users WHERE user_id = $user_id ";
+                    $get_email_query = mysqli_query($connection, $query);
+                    $row = mysqli_fetch_array($get_email_query);
+                    $db_user_email = $row['user_email'];
 
-                $query = "UPDATE users SET ";
-                $query .= "user_firstname = '{$user_firstname}', ";
-                $query .= "user_lastname = '{$user_lastname}', ";
-                $query .= "user_email = '{$user_email}', ";
-                $query .= "username = '{$username}', ";
-                $query .= "user_role = '{$user_role}', ";
-                $query .= "user_password = '{$user_password}', ";
-                $query .= "user_image = '{$user_image}' ";
-                $query .= "WHERE username = '{$username}' ";
-                $update_user_query = mysqli_query($connection, $query);
+                    if ($db_user_email != $user_email) {
+                        if(email_exists($user_email)) {
+                            $errors = "An account associated with this email already exists.";
+                        } else {
+                            $query = "UPDATE users SET ";
+                            $query .= "user_firstname = '{$user_firstname}', ";
+                            $query .= "user_lastname = '{$user_lastname}', ";
+                            $query .= "user_email = '{$user_email}', ";
+                            $query .= "username = '{$username}', ";
+                            $query .= "user_role = '{$user_role}', ";
+                            $query .= "user_password = '{$user_password}', ";
+                            $query .= "user_image = '{$user_image}' ";
+                            $query .= "WHERE username = '{$username}' ";
+                            $update_user_query = mysqli_query($connection, $query);
 
-                $_SESSION['username'] = $username;
-                $_SESSION['firstname'] = $user_firstname;
-                $_SESSION['lastname'] = $user_lastname;
-                $_SESSION['user_role'] = $user_role;
+                            $_SESSION['username'] = $username;
+                            $_SESSION['firstname'] = $user_firstname;
+                            $_SESSION['lastname'] = $user_lastname;
+                            $_SESSION['user_role'] = $user_role;
 
-                if (!$update_user_query) {
-                    die("QUERY FAILED<br>" . mysqli_error($connection));
+                            if (!$update_user_query) {
+                                die("QUERY FAILED<br>" . mysqli_error($connection));
+                            }
+                        }
+                    }
                 }
             }
             ?>
@@ -101,6 +124,11 @@ if (isset($_SESSION['username'])) {
                     <br>
                     <?php if (isset($_POST['update_user'])) {
                         echo "<h3 style='text-align: center;'>Profile updated!</h3><br><br>";
+                    }
+                    ?>
+                    <?php
+                    if ($errors) {
+                        echo "<br><div role='alert' style='color:red;'>{$errors}</div><br><br>";
                     }
                     ?>
                     <form action="" method="post" enctype="multipart/form-data">
