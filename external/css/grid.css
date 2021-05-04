@@ -83,6 +83,7 @@
 
 .col.span-1-of-3 {
 	margin-left: 2%;
+	height: 250px;
 }
 
 
@@ -97,6 +98,9 @@
 	}
 	.span-1-of-3 {
 		width: 100%;
+	}
+	.col.span-1-of-3 {
+		height: auto;
 	}
 }
 

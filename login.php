@@ -34,6 +34,8 @@ include "includes/navigation.php"; // Navigation
             <p>Or</p>
             <br>
             <a class="btn btn-ghost" href="signup" role="button">Create an Account</a>
+            <br><br>
+            <a href="forgot-password" style="border:0;">Forgot password?</a>
         </div>
     </section>
 
