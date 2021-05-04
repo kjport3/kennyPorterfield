@@ -41,6 +41,8 @@ if (isset($_GET['email']) && isset($_GET['token'])) {
                 $_SESSION['user_role'] = $db_user_role;
 
                 header("Location: ./");
+            } else {
+                $errors = "\nThe two passwords need to match.";
             }
         }
     }
@@ -55,6 +57,11 @@ if (isset($_GET['email']) && isset($_GET['token'])) {
         <div class="row form-group" style="width: 50%;">
             <h2>Reset password</h2>
             <br>
+            <?php
+            if ($errors) {
+                echo "<br><div role='alert' style='color:red;'>{$errors}</div><br><br>";
+            }
+            ?>
             <form action="" method="post">
                 <div class="form-group">
                     <label for="username">New password:</label>

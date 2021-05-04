@@ -57,7 +57,7 @@ if (isset($_POST['user_email'])) {
                 echo "<br><div role='alert'>You should receive an email shortly with a link to reset your password.</div><br>{$errors}<br>";
             } 
             if ($errors) {
-                echo "<br><div role='alert'>{$errors}</div><br><br>";
+                echo "<br><div role='alert' style='color:red;'>{$errors}</div><br><br>";
             }
             ?>
             <form action="" method="post">
