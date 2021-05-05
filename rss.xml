@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Kenny Porterfield's Blog RSS Feed</title>
+  <link>http://www.kennyporterfield.com</link>
+  <description>Subscribe to my RSS feed so you can stay up to date with what I'm sharing.</description>
+  <item>
+    <title>Sorting Algorithms &amp; Optimizing Optimistically</title>
+    <link>http://www.kennyporterfield.com/post/31</link>
+    <description>We take a look at 3 different sorting algorithms and examine their efficiency in various scenarios (best-case, average-case, and worst-case).</description>
+    <pubDate>Mon, 03 May 2021 11:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>YDKJS: Scope &amp; Closures</title>
+    <link>http://www.kennyporterfield.com/post/28</link>
+    <description>We go over what scope is, how it works in JavaScript, and try to demystify closures.</description>
+    <pubDate>Wed, 28 April 2021 13:45:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Sorted Arrays, Binary Search, &amp; Big O</title>
+    <link>http://www.kennyporterfield.com/post/20</link>
+    <description>In my second blog post on Data Structures &amp; Algorithms, I go over a couple of new data structures, explore the Binary Search algorithm, and start learning about the basics of Big O Notation.</description>
+    <pubDate>Wed, 21 April 2021 13:00:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Improving CSS With SASS</title>
+    <link>http://www.kennyporterfield.com/post/19</link>
+    <description>As websites get larger and more complex, writing CSS from scratch can be tedious and it's easy to make small mistakes. If you've ever thought about whether there could possibly be a better way to do CSS, then it's time for you to learn about Sass (Syntactically Awesome Style Sheets).</description>
+    <pubDate>Fri, 16 April 2021 16:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Data Structures &amp; Algorithms 101</title>
+    <link>http://www.kennyporterfield.com/post/18</link>
+    <description>In my first blog post on Data Structures &amp; Algorithms, I go over some of the basics on how they're used and interacted with and why they're important.</description>
+    <pubDate>Fri, 09 April 2021 17:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Python Practice W/Mimo</title>
+    <link>http://www.kennyporterfield.com/post/17</link>
+    <description>I share some of my experiences lately with the educational coding app Mimo, as I go through their Python course.</description>
+    <pubDate>Fri, 26 March 2021 10:45:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Is PHP Relevant?</title>
+    <link>http://www.kennyporterfield.com/post/16</link>
+    <description>"Is PHP dead?" is a question that some people have been asking on Internet message boards for over a decade, since the introduction of Node.js. I aim to explore this question and ultimately defend PHP's honor.</description>
+    <pubDate>Sat, 20 March 2021 07:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Python Practice W/Mimo</title>
+    <link>http://www.kennyporterfield.com/post/17</link>
+    <description>I share some of my experiences lately with the educational coding app Mimo, as I go through their Python course.</description>
+    <pubDate>Fri, 26 March 2021 10:45:00 EST</pubDate>
+  </item>
+  <item>
+    <title>You Don't Know JS</title>
+    <link>http://www.kennyporterfield.com/post/16</link>
+    <description>You Don't Know JS is a book series by Kyle Simpson that dives deep into the core mechanisms of the JavaScript language. The premise is that JavaScript can be easy to learn partially, but much harder to learn completely. It is common for developers to learn enough JavaScript to get the job done without understanding how JavaScript really works, and many approaches to building things with JavaScript use syntactical sugar to emulate how other programming languages work. I read the series in 2020, and am going over it again and sharing my learnings from each book here. (The author made the series available for free on Github so I don't think I'm breaking any rules here.)</description>
+    <pubDate>Fri, 26 March 2021 10:45:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Marketing Cloud Developer - Security</title>
+    <link>http://www.kennyporterfield.com/post/7</link>
+    <description>In this latest Marketing Cloud Developer study guide entry we cover Security, which accounts for 7% of the exam.</description>
+    <pubDate>Sun, 21 February 2021 7:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Marketing Cloud Developer - Data Management</title>
+    <link>http://www.kennyporterfield.com/post/6</link>
+    <description>Data Management accounts for 22% of the Marketing Cloud Developer certification exam, and is one of the most important sections that you'll learn in terms of real-world value and actual use cases. We learn what we need to know here for the exam, including SQL and the various activities related to Data Management in Marketing Cloud.</description>
+    <pubDate>Thu, 18 February 2021 16:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Marketing Cloud Developer - APIs</title>
+    <link>http://www.kennyporterfield.com/post/5</link>
+    <description>APIs account for a substantial 22% of the Marketing Cloud Developer certification exam. In this blog post, we learn what we need to know about Marketing Cloud's REST &amp; SOAP APIs.</description>
+    <pubDate>Mon, 15 February 2021 14:15:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Marketing Cloud Developer - Programmatic Languages</title>
+    <link>http://www.kennyporterfield.com/post/4</link>
+    <description>Programmatic Languages are the biggest section of the Marketing Cloud Developer certification exam at 35%, understandably so. In this edition of the Marketing Cloud Developer study guide entry we cover what you need to know about AMPscript and SSJS.</description>
+    <pubDate>Sat, 13 February 2021 7:00:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Marketing Cloud Developer - Data Modeling</title>
+    <link>http://www.kennyporterfield.com/post/3</link>
+    <description>Data Modeling accounts for 14% of the exam. We take a look at the Contact Model, how to differentiate between different types and uses of Data Extensions in Marketing Cloud, the Contact Delete process, and how Contact Records relate across channels.</description>
+    <pubDate>Fri, 12 February 2021 17:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>Salesforce Marketing Cloud Developer Certification</title>
+    <link>http://www.kennyporterfield.com/post/2</link>
+    <description>I took and passed the Marketing Cloud Developer certification exam a couple of weeks ago to become a Salesforce Certified Marketing Cloud Developer. This has the reputation of being a pretty tough exam to pass (like most Salesforce certifications). I am to demystify the contents of this exam, and share what I learned that got me to pass the test.</description>
+    <pubDate>Wed, 10 February 2021 7:30:00 EST</pubDate>
+  </item>
+  <item>
+    <title>OpenJS World 2020</title>
+    <link>http://www.kennyporterfield.com/post/1</link>
+    <description>Cassidy Williams talk on sharing as a way to learn is what inspired me to create this blog in the first place, so that's what I am trying to do here. In my first blog post ever, I'm just copy/pasting some of my notes from the OpenJS Conference 2020. It's not too exciting, but I hope you'll check out some of the talks from this years OpenJS World Conference because they are all available for free on Youtube and there was some really good stuff shared.</description>
+    <pubDate>Fri, 20 June 2020 7:30:00 EST</pubDate>
+  </item>
+</channel>
+
+</rss> 
