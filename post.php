@@ -35,6 +35,9 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
     $post_content = $row['post_content'];
     $post_category_id = $row['post_category_id'];
     $post_status = $row['post_status'];
+
+    if ($post_status == 'Published' || $user_role == 'admin') {
+
     ?>
     <section class="section-about" id="about">
         <div class="row">
@@ -89,10 +92,59 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             ?>
         </div>
     </section>
-<?php } ?>
 
+    <?php include "includes/comments.php"; ?>
 
-<?php include "includes/comments.php"; ?>
+    <?php } else ?> 
+        <section class="section-about" id="about">
+            <div class="row blog-post">
+                <br><br><br>
+                <h2>No blog post found</h2>
+                <br><br>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Search All Blogs</h4><br>
+                            <form action="search" method="post">
+                                <div class="input-group">
+                                    <input name="search" type="text" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button name="submit" class="btn btn-default" type="submit"
+                                                style="display:none;"></button>
+                                    </span>
+                                </div>
+                            </form><!-- search form -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <?php
+                            $query = "SELECT * FROM categories";
+                            $select_categories_sidebar = mysqli_query($connection, $query);
+                            ?>
+                            <h4>Categories</h4><br>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($select_categories_sidebar)) {
+                            $cat_title = $row['cat_title'];
+                            $cat_id = $row['cat_id'];
+                            ?>
+                            <div class="col span-1-of-2"
+                            <p style='margin-bottom:15px;'>
+                                <a href='category/<?php echo $cat_id; ?>'><?php echo $cat_title; ?></a>
+                            </p>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
 
 <?php include "includes/blog_showcase.php"; ?>
 
