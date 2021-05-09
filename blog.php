@@ -5,7 +5,6 @@ include "includes/header.php"; // Header
 
 include "includes/navigation.php"; // Site Navigation
 ?>
-    <br><br>
     <section class="section-blog" id="about">
         <div class="row">
             <img src="../resources/img/blog-hero.jpg" alt="Hello" class="rectangle-hero">

@@ -70,7 +70,8 @@
 }
 
 .hljs-literal,
-.hljs-number { !important;
+.hljs-number { 
+  color: #bd93f9 !important;
 }
 
 .hljs-emphasis {
