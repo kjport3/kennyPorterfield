@@ -1,8 +1,7 @@
 <div class="row">
     <img src="resources/img/kp-logo-white.png" alt="Kenny Porterfield" class="logo">
-    <a href="/"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield"
-                                                   class="logo-black"></a>
-    <ul class="main-nav js--main-nav">
+    <a href="/"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield" class="logo-black"></a>
+    <ul class="main-nav js--main-nav search-li">
         <li><a href="/">Home</a></li>
         <!-- <li><a href="gogo-dev/gogorunning">Work</a></li> -->
         <li><a href="blog">Blog</a></li>

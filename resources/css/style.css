@@ -435,7 +435,20 @@ header {
 
 @media (max-width: 768px) {
     header {
-
+        background-attachment: scroll;
+    }
+    .search-li {
+        max-width: 60%;
+    }
+    .logo {
+        max-width:75px;
+        max-height:75px;
+    }
+    .form-control.nav-input {
+        display: none;
+    }
+    .sticky .form-control.nav-input {
+        display: block;
     }
 }
 
@@ -687,12 +700,18 @@ section#blog a {
 }
 
 .section-blogs {
-    padding: 65px 0 0 0;
+    padding: 40px 0 0 0;
+}
+
+.section-blogs h2 {
+    margin-top: 0px;
 }
 
 .blogs-showcase {
     list-style: none;
     width: 100%;
+    max-width: 1280px;
+    margin: auto;
 }
 
 .blogs-showcase li {
@@ -710,6 +729,15 @@ section#blog a {
 
 .blog-photo:hover {
     background-color: #000;
+}
+
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 250px;
+    border-radius: 50%;
 }
 
 .about-container {

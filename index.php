@@ -8,7 +8,7 @@ include "includes/home_navigation.php"; // Homepage Navigation
 
     <section class="section-about js--section-about" id="about">
         <div class="row">
-            <img src='../resources/img/Profile.JPG' alt='Kenny Porterfield' class='blog-hero'>
+            <img src='../resources/img/profile-pic.jpg' alt='Kenny Porterfield' class='profile-pic'>
         </div>
         <div class="row">
             <h2>About me</h2>
