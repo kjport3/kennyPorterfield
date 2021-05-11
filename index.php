@@ -28,6 +28,7 @@ include "includes/home_navigation.php"; // Homepage Navigation
             <div class="col span-1-of-2 about-container">
                 <ul class="social-links about-links">
                     <li><a href="https://www.github.com/kjport3" title="Github" target="_blank"><i class="ion-social-github"></i></a></li>
+                    <li><a href="https://codepen.io/kjport3/" title="CodePen" target="_blank"><i class="ion-social-codepen"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/kenporterfield/" title="LinkedIn" target="_blank"><i class="ion-social-linkedin"></i></a></li>
                     <li><a href="./rss.xml" title="Subscribe via RSS" target="_blank"><i class="ion-social-rss"></i></a></li>
                     <li class="dropdown">
