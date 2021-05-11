@@ -583,6 +583,61 @@ header {
     background: rgba(255, 255, 255, 0.98)
 }
 
+.dropdown-content-inline {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+    width: 200px;
+}
+
+.dropdown-content-inline a {
+    display: inline-block;
+}
+
+.inline-dropdown-first {
+    margin: 0 0 0 20px;
+    display: inline-block;
+    float: left;
+}
+
+.inline-dropdown {
+    margin: 0;
+    display: inline-block;
+    float: left;
+}
+
+.dropdown:hover .dropdown-content-inline {display: inline-block;}
+
+.main-nav .dropdown-content-inline li {
+    margin-left: 0;
+}
+
+.dropdown-content-inline .divider {
+    height: 1px;
+    margin: 9px 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.sticky .dropdown-content-inline {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+@media (max-width: 768px) {
+    .dropdown-content-inline {
+        max-width:100px;
+        top: 0;
+    }
+    .mob-icon-row {
+        margin-left: 20px;
+    }
+}
+
 
 /* Mobile navi */
 .mobile-nav-icon {
@@ -951,29 +1006,32 @@ footer {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram,
-.ion-social-rss {
+.ion-social-rss,
+.ion-ios-gear,
+.ion-ios-book,
+.ion-android-walk,
+.ion-social-linkedin,
+.ion-social-github {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
+.ion-social-facebook:hover,
+.ion-social-twitter:hover,
+.ion-social-googleplus:hover,
+.ion-social-instagram:hover,
+.ion-social-rss:hover,
+.ion-ios-gear:hover,
+.ion-ios-book:hover,
+.ion-android-walk:hover,
+.ion-social-linkedin:hover,
 .ion-social-github:hover {
     color: #45aaf2;
 }
 
-.ion-social-instagram:hover {
-    color: #45aaf2;
-}
-
-.ion-social-linkedin:hover {
-    color: #45aaf2;
-}
-
-.ion-social-rss:hover {
-    color: #45aaf2;
-}
-
-.ion-android-walk:hover {
-    color: #45aaf2;
+.inactive-link {
+    pointer-events: none;
+    cursor: default;
 }
 
 

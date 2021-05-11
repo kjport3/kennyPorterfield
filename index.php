@@ -29,9 +29,24 @@ include "includes/home_navigation.php"; // Homepage Navigation
                 <ul class="social-links about-links">
                     <li><a href="https://www.github.com/kjport3" title="Github" target="_blank"><i class="ion-social-github"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/kenporterfield/" title="LinkedIn" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/kenny_yom/" title="Instagram" target="_blank"><i class="ion-social-instagram"></i></a></li>
-                    <li><a href="https://www.strava.com/athletes/4032470" title="Strava" target="_blank"><i class="ion-android-walk"></i></a></li>
                     <li><a href="./rss.xml" title="Subscribe via RSS" target="_blank"><i class="ion-social-rss"></i></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-btn inactive-link" title="More..."><i class="ion-ios-more"></i> </a>
+                        <ul class="dropdown-content-inline">
+                            <li class="inline-dropdown-first">
+                                <a href="https://gist.github.com/kjport3" title="Github Gists" target="_blank"><i class="ion-ios-gear"></i></a>
+                            </li>
+                            <li class="inline-dropdown">
+                                <a href="https://www.instagram.com/kenny_yom/" title="Instagram" target="_blank"><i class="ion-social-instagram"></i></a>
+                            </li>
+                            <li class="inline-dropdown mob-icon-row">
+                                <a href="https://www.goodreads.com/user/show/28192247-kenny-porterfield" title="Goodreads" target="_blank"><i class="ion-ios-book"></i></a>
+                            </li>
+                            <li class="inline-dropdown">
+                                <a href="https://www.strava.com/athletes/4032470" title="Strava" target="_blank"><i class="ion-android-walk"></i></a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

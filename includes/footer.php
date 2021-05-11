@@ -1,17 +1,15 @@
 <footer>
     <div class="row">
-        <div class="col span-1-of-2">
+        <div class="footer-col span-1-of-2-footer">
             <ul class="footer-nav">
                 <li><a href="about" class="js--scroll-to-about">About Me</a></li>
                 <li><a href="blog">Blog</a></li>
             </ul>
         </div>
-        <div class="col span-1-of-2">
+        <div class="footer-col span-1-of-2-footer">
             <ul class="social-links">
                 <li><a href="https://www.github.com/kjport3" title="Github" target="_blank"><i class="ion-social-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/kenporterfield/" title="LinkedIn" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-                <li><a href="https://www.instagram.com/kenny_yom/" title="Instagram" target="_blank"><i class="ion-social-instagram"></i></a></li>
-                <li><a href="https://www.strava.com/athletes/4032470" title="Strava" target="_blank"><i class="ion-android-walk"></i></a></li>
                 <li><a href="./rss.xml" title="Subscribe via RSS" target="_blank"><i class="ion-social-rss"></i></a></li>
             </ul>
         </div>
