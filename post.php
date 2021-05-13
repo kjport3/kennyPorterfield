@@ -65,22 +65,24 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
             $select_categories = mysqli_query($connection, $query);
 
-            while($row = mysqli_fetch_assoc($select_categories)) {
+            while ($row = mysqli_fetch_assoc($select_categories)) {
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
 
                 echo "<p style='text-align:right;'><small>Category: <a href='category/{$cat_id}'>{$cat_title}</a></small></p>";
             }
             ?>
-            <p style="min-height: 20px;">
-                <?php echo $post_content; ?>
-            </p>
+            <div class="post-body">
+                <p style="min-height: 20px;">
+                    <?php echo $post_content; ?>
+                </p>
+            </div>
             <br><br>
             <?php
             $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id}";
             $select_categories = mysqli_query($connection, $query);
 
-            while($row = mysqli_fetch_assoc($select_categories)) {
+            while ($row = mysqli_fetch_assoc($select_categories)) {
                 $cat_id = $row['cat_id'];
                 $cat_title = $row['cat_title'];
 
@@ -89,7 +91,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             ?>
         </div>
     </section>
-    <?php } ?>
+<?php } ?>
 
 <?php include "includes/comments.php"; ?>
 
