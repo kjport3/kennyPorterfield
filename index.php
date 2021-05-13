@@ -17,9 +17,7 @@ include "includes/home_navigation.php"; // Homepage Navigation
                 spend my time running, reading, learning, and growing as a developer. Fun facts about me: I have run an
                 average of over 2,000 miles a year for the last 5 years. In 2014 I thru-hiked the 2,200 miles of
                 the Appalachian Trail over 4 months. I read 70 books last year. And I am currently a Senior Campaign
-                Developer at Digital Additive. I have found that writing about the things I'm learning forces me to
-                slow down, lets the ideas take root, and helps them stick with me. In addition to sharing
-                things I'm learning, I plan to write some blogs on life stuff.<br>
+                Developer at Digital Additive.<br>
 <!--                <a href="about.php">More about me<i class="fa fa-fw fa-angle-double-right"></i></a>-->
                 <br><br>
             </p>

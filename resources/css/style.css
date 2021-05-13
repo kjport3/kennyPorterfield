@@ -760,12 +760,13 @@ section#blog a {
 
 .section-blogs h2 {
     margin-top: 0px;
+    margin-bottom: 60px;
 }
 
 .blogs-showcase {
     list-style: none;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: auto;
 }
 

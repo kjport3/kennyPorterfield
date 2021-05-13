@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     <link rel="stylesheet" type="text/css" href="admin/font-awesome/css/font-awesome.min.css">
-    <link rel="icon" href="http://www.kennyporterfield.com/resources/img/kp-logo-white.png" type="image/icon">
+    <link rel="icon" href="http://www.kennyporterfield.com/resources/img/kp-logo-white-solid.png" type="image/icon">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
