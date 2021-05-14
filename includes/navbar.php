@@ -2,9 +2,22 @@
     <img src="resources/img/kp-logo-white.png" alt="Kenny Porterfield" class="logo">
     <a href="/"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield" class="logo-black"></a>
     <ul class="main-nav js--main-nav search-li">
-        <li><a href="/">Home</a></li>
-        <!-- <li><a href="gogo-dev/gogorunning">Work</a></li> -->
-        <li><a href="blog">Blog</a></li>
+        <?php
+        $link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+        if ($link == 'http://www.kennyporterfield.com/') {
+            echo "<li><a href='/' style='border-bottom: 2px solid #45aaf2;'>Home</a></li>";
+        } else {
+            echo "<li><a href='/'>Home</a></li>";
+        }
+        ?>
+        <?php
+        $link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+        if ($link == 'http://www.kennyporterfield.com/blog') {
+            echo "<li><a href='blog' style='border-bottom: 2px solid #45aaf2;'>Blog</a></li>";
+        } else {
+            echo "<li><a href='blog'>Blog</a></li>";
+        }
+        ?>
         <li><a href="#contact" class="js--scroll-to-contact">Contact</a></li>
         <?php
         if (isset($_SESSION['user_role'])) {
@@ -35,11 +48,13 @@
         <?php
         if (!isset($_SESSION['user_role'])) {
             $user_role = $_SESSION['user_role'];
-            ?>
-            <li>
-                <a href="login">Login</a>
-            </li>
-        <?php } ?>
+            $link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+            if ($link == 'http://www.kennyporterfield.com/login') {
+                echo "<li><a href='login' style='border-bottom: 2px solid #45aaf2;'>Login</a></li>";
+            } else {
+                echo "<li><a href='login'>Login</a></li>";
+            }
+        } ?>
         <li>
             <form action="search" method="post">
                 <div class="input-group nav-search">

@@ -17,7 +17,7 @@ Orange color: #45aaf2
 html,
 body {
     background-color: #fff;
-    color: #555;
+    color: #444;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -845,7 +845,7 @@ section#blog a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 80px;
     width: 250px;
     border-radius: 50%;
 }
@@ -1055,6 +1055,10 @@ footer {
 .social-links li a:link,
 .social-links li a:visited {
     font-size: 160%;
+}
+
+.about-links li a i {
+    color: #555;
 }
 
 .ion-social-facebook,

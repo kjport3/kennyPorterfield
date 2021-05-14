@@ -3,7 +3,7 @@ include "includes/db.php"; // DB Connection
 
 include "includes/header.php"; // Header
 
-include "includes/home_navigation.php"; // Homepage Navigation
+include "includes/navigation.php"; // Homepage Navigation
 ?>
 
     <section class="section-about js--section-about" id="about">
@@ -19,7 +19,7 @@ include "includes/home_navigation.php"; // Homepage Navigation
                 the Appalachian Trail over 4 months. I read 70 books last year. And I am currently a Senior Campaign
                 Developer at Digital Additive.<br>
 <!--                <a href="about.php">More about me<i class="fa fa-fw fa-angle-double-right"></i></a>-->
-                <br><br>
+                <br>
             </p>
         </div>
         <div class="row">
@@ -28,8 +28,11 @@ include "includes/home_navigation.php"; // Homepage Navigation
                     <li><a href="https://www.github.com/kjport3" title="Github" target="_blank"><i class="ion-social-github"></i></a></li>
                     <li><a href="https://codepen.io/kjport3/" title="CodePen" target="_blank"><i class="ion-social-codepen"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/kenporterfield/" title="LinkedIn" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/kenny_yom/" title="Instagram" target="_blank"><i class="ion-social-instagram"></i></a></li>
+                    <li><a href="https://www.goodreads.com/user/show/28192247-kenny-porterfield" title="Goodreads" target="_blank"><i class="ion-ios-book"></i></a></li>
+                    <li><a href="https://www.strava.com/athletes/4032470" title="Strava" target="_blank"><i class="ion-android-walk"></i></a></li>
                     <li><a href="./rss.xml" title="Subscribe via RSS" target="_blank"><i class="ion-social-rss"></i></a></li>
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="#" class="dropdown-btn inactive-link" title="More..."><i class="ion-ios-more"></i> </a>
                         <ul class="dropdown-content-inline">
                             <li class="inline-dropdown-first">
@@ -45,7 +48,7 @@ include "includes/home_navigation.php"; // Homepage Navigation
                                 <a href="https://www.strava.com/athletes/4032470" title="Strava" target="_blank"><i class="ion-android-walk"></i></a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
