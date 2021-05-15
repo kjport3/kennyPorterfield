@@ -13,7 +13,7 @@ include "includes/navigation.php"; // Site Navigation
             I find that writing about and sharing things I'm learning allows me to
             slow down, let the ideas take root, and helps them stick with me. In addition to that,
             I plan to write some blogs on life stuff. These are my latest entries.
-            You can also <a href="blog#category" class="js--scroll-to-category" style="text-decoration: none !important; border: 0 !important;">search</a> or <a href="blog#category" class="js--scroll-to-category" style="text-decoration: none !important; border: 0 !important;">view by category</a> to find older ones!
+            You can also <a href="blog#category" class="js--scroll-to-category">search</a> or <a href="blog#category" class="js--scroll-to-category">view by category</a> to find older ones!
         </p>
     </div>
 </section>
@@ -78,7 +78,7 @@ include "includes/navigation.php"; // Site Navigation
                             $cat_title = $row['cat_title'];
                             $cat_id = $row['cat_id'];
                             ?>
-                        <div class="col span-1-of-2"
+                        <div class="col span-1-of-2">
                             <p style='margin-bottom:15px;'>
                                 <a href='category/<?php echo $cat_id; ?>'><?php echo $cat_title; ?></a>
                             </p>

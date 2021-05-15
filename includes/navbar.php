@@ -5,7 +5,7 @@
         <?php
         $link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
         if ($link == 'http://www.kennyporterfield.com/') {
-            echo "<li><a href='/' style='border-bottom: 2px solid #45aaf2;'>Home</a></li>";
+            echo "<li><a href='/' style='border-bottom: 2px solid #e9c46a;'>Home</a></li>";
         } else {
             echo "<li><a href='/'>Home</a></li>";
         }
@@ -13,7 +13,7 @@
         <?php
         $link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
         if ($link == 'http://www.kennyporterfield.com/blog') {
-            echo "<li><a href='blog' style='border-bottom: 2px solid #45aaf2;'>Blog</a></li>";
+            echo "<li><a href='blog' style='border-bottom: 2px solid #e9c46a;'>Blog</a></li>";
         } else {
             echo "<li><a href='blog'>Blog</a></li>";
         }
@@ -50,7 +50,7 @@
             $user_role = $_SESSION['user_role'];
             $link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
             if ($link == 'http://www.kennyporterfield.com/login') {
-                echo "<li><a href='login' style='border-bottom: 2px solid #45aaf2;'>Login</a></li>";
+                echo "<li><a href='login' style='border-bottom: 2px solid #e9c46a;'>Login</a></li>";
             } else {
                 echo "<li><a href='login'>Login</a></li>";
             }

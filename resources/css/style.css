@@ -1,9 +1,3 @@
-/*
-Orange color: #45aaf2
-
-*/
-
-
 /* ----------------------------------------------- */
 /* BASIC SETUP */
 /* ----------------------------------------------- */
@@ -55,52 +49,54 @@ body {
 .post-body h1 {
     font-size: 1.6em;
     color: #264653;
-    font-weight:700;
     margin: 0 0 20px 0;
-    padding: 0;
-    text-decoration: none !important;
-    border: 0 !important;
 }
 
 .post-body h2 {
     font-size: 1.4em;
     color: #264653;
-    font-weight:700;
     margin: 0 0 20px 0;
-    padding: 0;
-    text-decoration: none !important;
-    border: 0 !important;
 }
 
 .post-body h3 {
     font-size: 1.2em;
     color: #e9c46a;
-    font-weight:700;
     margin: 0 0 20px 0;
-    padding: 0;
-    text-decoration: none !important;
-    border: 0 !important;
 }
 
 .post-body h4 {
     font-size: 1.1em;
     color: #f4a261;
-    font-weight:700;
     margin: 0 0 10px 0;
-    padding: 0;
-    text-decoration: none !important;
-    border: 0 !important;
 }
 
 .post-body h5 {
     font-size: 1em;
     color: #e76f51;
-    font-weight:700;
     margin: 0 0 10px 0;
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5 {
     padding: 0;
+    font-weight:700;
     text-decoration: none !important;
     border: 0 !important;
+    background-color: #FFF;
 }
+
+.post-body h1:after,
+.post-body h2:after,
+.post-body h3:after,
+.post-body h4:after,
+.post-body h5:after {
+    background-color: #FFF;
+}
+
+
 
 code {
     color: #264653;
@@ -148,6 +144,7 @@ h2 {
     margin-bottom: 30px;
     margin-top: 30px;
     letter-spacing: 1px;
+    color: #264653;
 }
 
 h3 {
@@ -159,7 +156,7 @@ h3 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #45aaf2;
+    background-color: #e9c46a;
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -231,14 +228,66 @@ h2:after {
     border: 0;
 }
 
-.section-about .form-group a:link {
-    border: 1px solid #45aaf2;
+.section-blog a:link {
+    border: 0;
 }
 
-.blog-post p img {
-    border-radius: 10% 30%;
+.section-about .form-group a:link {
+    border: 1px solid #015678;
+}
+
+.blog-post .img-10 {
+    border-radius: 10px;
+    margin: 30px 45% 30px 45%;
+    width: 10%;
+}
+
+.blog-post .img-20 {
+    border-radius: 10px;
+    margin: 30px 40% 30px 40%;
+    width: 20%;
+}
+
+.blog-post .img-30 {
+    border-radius: 10px;
+    margin: 30px 35% 30px 35%;
+    width: 30%;
+}
+
+.blog-post .img-40 {
+    border-radius: 10px;
+    margin: 30px 30% 30px 30%;
+    width: 40%;
+}
+
+.blog-post .img-50 {
+    border-radius: 10px;
+    margin: 30px 25% 30px 25%;
+    width: 50%;
+}
+
+.blog-post .img-60 {
+    border-radius: 10px;
+    margin: 30px 20% 30px 20%;
+    width: 60%;
+}
+
+.blog-post .img-80 {
+    border-radius: 10px;
     margin: 30px 10% 30px 10%;
     width: 80%;
+}
+
+.blog-post .img-90 {
+    border-radius: 10px;
+    margin: 30px 5% 30px 5%;
+    width: 90%;
+}
+
+.blog-post .img-100 {
+    border-radius: 10px;
+    margin: 30px 0;
+    width: 100%;
 }
 
 .box p {
@@ -339,7 +388,7 @@ label {
 .icon-big {
     font-size: 350%;
     display: block;
-    color: #45aaf2;
+    color: #e9c46a;
     margin-bottom: 10px;
 }
 
@@ -347,7 +396,7 @@ label {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #45aaf2;
+    color: #e9c46a;
     font-size: 120%;
     margin-right: 10px;
 
@@ -361,30 +410,36 @@ label {
 
 a:link,
 a:visited {
-    color: #45aaf2;
+    color: #5295b0;
     text-decoration: none;
     padding-bottom: 1px;
-    border-bottom: 1px solid #45aaf2;
+    border-bottom: 1px solid #5295b0;
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
 
 a:hover,
 a:active {
-    color: #555;
+    color: #264653;
     border-bottom: 1px solid transparent;
 }
 
 .blog-post a:hover,
 .blog-post a:active {
-    color: #555;
-    border-bottom: 1px solid #555;
+    color: #264653;
+    border-bottom: 1px solid #264653;
 }
 
 .section-about a:hover,
 .section-about a:active {
-    color: #555;
-    border-bottom: 1px solid #555;
+    color: #264653;
+    border-bottom: 1px solid #264653;
+}
+
+.section-blog a:hover,
+.section-blog a:active {
+    color: #264653;
+    border-bottom: 1px solid #264653;
 }
 
 /* ----- BUTTONS ----- */
@@ -405,8 +460,8 @@ input[type="submit"] {
 
 
 button.btn {
-    background-color: #45aaf2;
-    border: 1px solid #45aaf2;
+    background-color: #015678;
+    border: 1px solid #015678;
     color: #fff;
     display: inline-block;
     padding: 10px 30px;
@@ -419,8 +474,8 @@ button.btn {
 }
 
 a.btn.login-btn {
-    background-color: #45aaf2;
-    border: 1px solid #45aaf2;
+    background-color: #015678;
+    border: 1px solid #015678;
     color: #fff;
     display: inline-block;
     padding: 10px 30px;
@@ -436,40 +491,40 @@ a.btn.login-btn {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #45aaf2;
-    border: 1px solid #45aaf2;
+    background-color: #015678;
+    border: 1px solid #015678;
     color: #fff;
     margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #45aaf2;
-    color: #45aaf2;
+    border: 1px solid #015678;
+    color: #015678;
 }
 
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #2d98da;
+    background-color: #264653;
     cursor: pointer;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #2d98da;
+    border: 1px solid #264653;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #2d98da;
+    border: 1px solid #264653;
     color: #fff;
 }
 
 .form-group .btn-ghost:hover,
 .form-group .btn-ghost:active {
-    border: 1px solid #2d98da;
+    border: 1px solid #264653;
     color: #fff;
 }
 
@@ -565,7 +620,7 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #45aaf2;
+    border-bottom: 2px solid #e9c46a;
 }
 
 .nav-search {
@@ -725,7 +780,7 @@ header {
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
     padding: 16px 0;
-    color: #555;
+    color: #264653;
 }
 
 .sticky .logo {
@@ -964,7 +1019,7 @@ section#blog a {
 }
 
 #contact a:hover {
-    color: #45aaf2;
+    color: #015678;
     border: none;
 }
 
@@ -1058,7 +1113,7 @@ footer {
 }
 
 .about-links li a i {
-    color: #555;
+    color: #264653;
 }
 
 .ion-social-facebook,
@@ -1087,7 +1142,7 @@ footer {
 .ion-android-walk:hover,
 .ion-social-linkedin:hover,
 .ion-social-github:hover {
-    color: #45aaf2;
+    color: #e9c46a;
 }
 
 .inactive-link {
