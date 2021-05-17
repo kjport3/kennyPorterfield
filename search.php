@@ -7,12 +7,12 @@ include "includes/navigation.php"; // Site Navigation
 ?>
     <br><br>
     <section class="section-blog" id="about">
-        <div class="row">
+        <div class="row-blog">
             <h2>Blog Search Results</h2>
         </div>
     </section>
-    <section class="section-about" id="about">
-        <div class="row search">
+    <section class="section-about" id="about" style="margin:0;padding:0;">
+        <div class="row-blog search">
             <?php
 
 
@@ -41,8 +41,7 @@ include "includes/navigation.php"; // Site Navigation
                             </form><!-- search form -->
                         </div>
                     </div>
-            <?php
-
+                    <?php
                 } else {
                     while ($row = mysqli_fetch_assoc($search_query)) {
                         $post_title = $row['post_title'];
@@ -53,15 +52,15 @@ include "includes/navigation.php"; // Site Navigation
                         $post_id = $row['post_id'];
                         ?>
 
-                        <div class="row">
-                            <a href="post/<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>" class="blog-hero"></a>
+                        <div class="row-blog">
+                            <a href="post/<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" style="margin-top:0;" alt="<?php echo $post_title; ?>" class="blog-hero"></a>
                         </div>
                         <p class="result-title">
                             <a href="post/<?php echo $post_id; ?>" style="text-decoration:none;"><?php echo $post_title; ?>
                                 - <?php echo date('D, M j Y', strtotime($post_date)); ?></a>
                         </p>
                         <br><br>
-                        <hr style="width: 60%; margin-left:20%;">
+                        <hr style="width: 60%; margin-left:20%;margin-bottom:60px;">
 
                         <?php
                     }

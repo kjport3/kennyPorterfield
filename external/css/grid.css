@@ -9,16 +9,24 @@
 
 /*  GROUPING  ============================================================================= */
 
-.row {
+.row,
+.row-medium,
+.row-blog {
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 .row:before,
-.row:after {
+.row:after,
+.row-medium:before,
+.row-blog:before,
+.row-medium:after,
+.row-blog:after {
     content:"";
     display:table;
 }
-.row:after {
+.row:after,
+.row-medium:after,
+.row-blog:after  {
     clear:both;
 }
 

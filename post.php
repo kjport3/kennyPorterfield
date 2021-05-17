@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
     $post_status = $row['post_status'];
     ?>
     <section class="section-about" id="about">
-        <div class="row">
+        <div class="row-medium">
             <?php
 
             if (empty($post_banner_image)) {
@@ -49,7 +49,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
             ?>
 
         </div>
-        <div class="row blog-post">
+        <div class="row-blog blog-post">
             <h2><?php echo $post_title; ?></h2>
             <?php
             if (isset($_SESSION['user_role'])) {

@@ -1,5 +1,5 @@
 <footer>
-    <div class="row">
+    <div class="row-medium">
         <div class="footer-col span-1-of-2-footer">
             <ul class="footer-nav">
                 <li><a href="about" class="js--scroll-to-about">About Me</a></li>
@@ -14,7 +14,7 @@
             </ul>
         </div>
     </div>
-    <div class="row footer-contact">
+    <div class="row-medium footer-contact">
         <p> </p>
     </div>
 </footer>

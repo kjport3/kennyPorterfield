@@ -7,7 +7,7 @@ include "includes/navigation.php"; // Site Navigation
 ?>
     <br><br>
     <section class="section-about" id="about">
-        <div class="row">
+        <div class="row-blog">
             <?php
             if (isset($_GET['category'])) {
                 $cat_id = $_GET['category'];
@@ -33,8 +33,8 @@ include "includes/navigation.php"; // Site Navigation
                     $post_id = $row['post_id'];
                     ?>
 
-                    <div class="row">
-                        <a href="post/<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" alt="<?php echo $post_title; ?>" class="blog-hero"></a>
+                    <div class="row-blog">
+                        <a href="post/<?php echo $post_id; ?>"><img src="../resources/img/<?php echo $post_image; ?>" style="margin-top:60px;" alt="<?php echo $post_title; ?>" class="blog-hero"></a>
                     </div>
                     <p class="result-title">
                         <a href="post/<?php echo $post_id; ?>"><?php echo $post_title; ?>

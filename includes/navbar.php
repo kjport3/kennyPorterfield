@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row-medium">
     <img src="resources/img/kp-logo-white.png" alt="Kenny Porterfield" class="logo">
     <a href="/"><img src="resources/img/kp-logo-black.png" alt="Kenny Porterfield" class="logo-black"></a>
     <ul class="main-nav js--main-nav search-li">

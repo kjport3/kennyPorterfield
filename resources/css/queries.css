@@ -5,7 +5,9 @@
         padding: 0 2%;
     }
 
-    .row { padding: 0 2%; }
+    .row,
+    .row-medium,
+    .row-blog { padding: 0 2%; }
 }
 
 
@@ -36,6 +38,8 @@
     footer { font-size: initial; }
 
     .row,
+    .row-medium,
+    .row-blog,
     .hero-text-box { padding: 0 4%; }
     .col {
         width: 100%;

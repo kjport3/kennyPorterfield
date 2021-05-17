@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row-blog">
     <div class="col-md-12 col-lg-8">
         <h3><strong>Comments</strong></h3>
     </div>
@@ -7,10 +7,9 @@
 <?php
 
 if (!isset($_SESSION['username'])) {
-
     ?>
     <!-- Comments Form -->
-    <div class="row">
+    <div class="row-blog">
         <div class="col-md-12 col-lg-8">
             <div class="well">
                 <p><a href="login">Login</a> or <a href="signup">create an account</a> to leave a comment.
@@ -28,8 +27,6 @@ if (isset($_SESSION['username'])) {
 
 
     if (isset($_POST['create_comment'])) {
-
-
         $post_id = $_GET['p_id'];
         $comment_author = $_POST['comment_author'];
         $comment_content = $_POST['comment_content'];
@@ -56,7 +53,6 @@ if (isset($_SESSION['username'])) {
         } else {
             echo "<script>alert('Comment field cannot be empty.')</script>";
         }
-
     }
     ?>
     <!-- Comments Form -->
