@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="external/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="external/css/grid.css">
     <link rel="stylesheet" type="text/css" href="external/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="external/css/animate.css">
+    <!-- <link rel="stylesheet" type="text/css" href="external/css/animate.css"> -->
     <link rel="stylesheet" type="text/css" href="external/css/dracula.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     <link rel="stylesheet" type="text/css" href="admin/font-awesome/css/font-awesome.min.css">
     <link rel="icon" href="http://www.kennyporterfield.com/resources/img/kp-logo-white-solid.png" type="image/icon">

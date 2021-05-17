@@ -17,7 +17,7 @@ include "includes/navigation.php"; // Site Navigation
         </p>
     </div>
 </section>
-<section class="section-about" id="about">
+<section class="blog-grid section-blog" id="about">
     <div class="row">
         <?php
         $query = "SELECT * FROM posts WHERE post_status = 'Published' ORDER BY post_id desc LIMIT 15";
