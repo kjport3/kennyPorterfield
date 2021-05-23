@@ -56,7 +56,7 @@ if (isset($_SESSION['username'])) {
     }
     ?>
     <!-- Comments Form -->
-    <div class="row">
+    <div class="row-blog">
         <div class="col-md-12 col-lg-8">
             <div class="well">
                 <h4>Leave a Comment:</h4><br>
@@ -103,7 +103,7 @@ if (isset($_GET['p_id'])) {
         ?>
 
         <!-- Posted Comments -->
-        <div class="row" id="comments">
+        <div class="row-blog" id="comments">
             <div class="col-md-12">
                 <div class="media">
                         <span class="pull-left">
