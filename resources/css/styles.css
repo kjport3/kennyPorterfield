@@ -813,12 +813,13 @@ section#blog a {
 .blogs-showcase {
   list-style: none;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1040px;
   margin: auto;
 }
 
 .blogs-showcase li {
   display: block;
+  padding: 5px;
   float: left;
   width: 25%;
 }
